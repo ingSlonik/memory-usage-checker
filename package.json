@@ -1,0 +1,22 @@
+{
+  "name": "muc",
+  "version": "0.1.0",
+  "description": "Memory Usage Checker is a tool for easy&lite checking your memory usage.",
+  "main": "./muc.js",
+  "bin": "./muc.js",
+  "scripts": {},
+  "license": "MIT",
+  "dependencies": {
+    "node-notifier": "^5.2.1",
+    "systeminformation": "^3.44.2"
+  },
+  "keywords": [
+    "check",
+    "memory",    
+    "usage",
+    "notification",
+    "easy&lite"
+  ],
+  "author": "Filip Paulů <ing.fenix@seznam.cz>",
+  "license": "MIT"
+}
