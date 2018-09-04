@@ -1,5 +1,5 @@
-__workspace/
 .vscode/
+__workspace/
 node_modules/
 .npmrc
 package-lock.json

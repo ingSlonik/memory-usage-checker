@@ -35,7 +35,7 @@ function showNotification(memoryStatus) {
         {
           title: 'Status of your memory',
           message: `Free: ${toPercent(memoryStatus)}%, ${toMB(memoryStatus)} MB`,
-          icon: path.resolve(__dirname, 'ram.png'),
+          icon: path.resolve(__dirname, 'images', 'ram.png'),
           sound: true,
         },
         (err, response) => {
@@ -65,7 +65,7 @@ function check() {
         if (timer.show) {
             timer.index = timeByPercent.fromPercent;
             timer.show = false;
-            timer.timeout = setTimeout(() => time.show = true, timeByPercent.time);
+            timer.timeout = setTimeout(() => timer.show = true, timeByPercent.time);
 
             showNotification(memoryStatus);
         }
@@ -82,11 +82,10 @@ console.log(`
         
 Memory  Usage  Checker
 
-Do you have problem that your ram is still full?
-This tool will report you usage of your memory and you can intervene in time.
-You can check the status in notification or in console.
-The more full memory you have, the more the MUC reminds you.
+Do you have the problem that your ram memory is getting full?
+This cross platform tool (Linux, macOS, Windows) will notify you about an increased memory usage and you can intervene in time.
+The higher the memory usage the more frequently MUC will remind you.
 
-Logs:`)
+Logs:`);
 
 check();
