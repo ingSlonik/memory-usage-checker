@@ -15,8 +15,19 @@
     "memory",    
     "usage",
     "notification",
-    "easy&lite"
+    "easy&lite",
+    "cross platform",
+    "linux",
+    "macOS",
+    "windows"
   ],
   "author": "Filip Paulů <ing.fenix@seznam.cz>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingSlonik/memory-usage-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ingSlonik/memory-usage-checker/issues"
+  }
 }
