@@ -23,11 +23,12 @@ const timer = {
 
 
 function toMB(memoryStatus) {
-    return Math.floor(memoryStatus.free / 1024 / 1024).toLocaleString();
+    console.log(memoryStatus)
+    return Math.floor(memoryStatus.available / 1024 / 1024).toLocaleString();
 }
 
 function toPercent(memoryStatus) {
-    return Math.floor(memoryStatus.free / memoryStatus.total * 100);
+    return Math.floor(memoryStatus.available / memoryStatus.total * 100);
 }
 
 function showNotification(memoryStatus) {
