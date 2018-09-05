@@ -23,7 +23,6 @@ const timer = {
 
 
 function toMB(memoryStatus) {
-    console.log(memoryStatus)
     return Math.floor(memoryStatus.available / 1024 / 1024).toLocaleString();
 }
 
