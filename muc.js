@@ -5,14 +5,18 @@ const notifier = require('node-notifier');
 const si = require('systeminformation');
 
 // times
-const minute = 60 * 1000;
-const checkTime = 1 * minute;
+const second = 1000;
+const minute = 60 * second;
+
+const checkTime = 10 * second;
 
 const times = [
-    { fromPercent: 100, time: 10 * minute },
-    { fromPercent: 20, time: 5 * minute },
-    { fromPercent: 10, time: 2 * minute },
+    { fromPercent: 100, time: 60 * minute },
+    { fromPercent: 50, time: 30 * minute },
+    { fromPercent: 20, time: 10 * minute },
+    { fromPercent: 10, time: 5 * minute },
     { fromPercent: 5, time: 1 * minute },
+    { fromPercent: 2, time: 30 * second },
 ];
 
 const timer = {
@@ -23,11 +27,11 @@ const timer = {
 
 
 function toMB(memoryStatus) {
-    return Math.floor(memoryStatus.free / 1024 / 1024).toLocaleString();
+    return Math.floor(memoryStatus.available / 1024 / 1024).toLocaleString();
 }
 
 function toPercent(memoryStatus) {
-    return Math.floor(memoryStatus.free / memoryStatus.total * 100);
+    return Math.floor(memoryStatus.available / memoryStatus.total * 100);
 }
 
 function showNotification(memoryStatus) {
