@@ -5,8 +5,10 @@ const notifier = require('node-notifier');
 const si = require('systeminformation');
 
 // times
-const minute = 60 * 1000;
-const checkTime = 1 * minute;
+const second = 1000;
+const minute = 60 * second;
+
+const checkTime = 10 * second;
 
 const times = [
     { fromPercent: 100, time: 10 * minute },
